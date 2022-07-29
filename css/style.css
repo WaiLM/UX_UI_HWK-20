@@ -134,7 +134,6 @@ a {
 }
 
 #hero {
-  /*min-height: 560px;*/
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -213,10 +212,12 @@ button:active {
 /* Portfolio Section */
 
 .section-header {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--main-margin);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.5rem;
-  padding: var(--main-margin);
 }
 
 .section-label {
@@ -227,10 +228,13 @@ button:active {
 }
 
 main {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--main-margin);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.5rem;
-  padding: var(--main-margin);
 }
 
 .card {
@@ -286,11 +290,13 @@ main {
 /* about me */
 
 #about-me-section {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--main-margin);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.5rem;
-  padding: var(--main-margin);
-  background-color: var(--background);
 }
 
 #left-about-me {
@@ -351,12 +357,15 @@ main {
 }
 
 footer {
-  background-color: var(--textColor);
-  min-height: 200px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--main-margin);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  background-color: var(--textColor);
+  min-height: 200px;
   gap: 1.5rem;
-  padding: var(--main-margin);
 }
 
 footer .reverse {
@@ -380,24 +389,8 @@ footer #contact {
   color: white;
 }
 
-#brand-footer {
-  height: 72px;
-  width: 15%;
-  min-width: 150px;
-  color: 0 0 0 0.5;
-}
-
-/*#contact-logos {
-  background-image: url(../images/contact_logos.png);
-  background-image: cover;
-  background-repeat: no-repeat;
-  height: 3rem;
-}*/
-
-i {
-  background-color: #e8e5e5;
-  height: 100;
-  width: 100;
+.wrapper-grey {
+  background-color: var(--textColor);
 }
 
 /* MODAL */
@@ -536,7 +529,7 @@ nav #burger {
 
 #Hello {
     font-size: 4.5rem;
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
   }
 
 #hero {
