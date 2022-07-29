@@ -550,6 +550,7 @@ nav #burger {
   grid-column: span 12;
   display: flex;
   flex-direction: column;
+  padding-top: 12.5rem;
   justify-content: center;
   align-items: start;
   gap: 1.7rem;}
