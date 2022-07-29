@@ -30,7 +30,7 @@ a {
     font-family: var(--primaryFont);
     font-weight: normal;
     color: var(--textColor);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
     text-decoration: none;
   }
@@ -42,10 +42,6 @@ a {
     color: var(--textColor);
     font-size: 16px;
     padding: 0 0 12px 0;
-  }
-
-  body > * {
-    max-width: 1440px;
   }
 
   :root {
@@ -63,7 +59,7 @@ a {
 
     --ln: 1px solid #C4C4C4;
     --main-margin: 4rem;
-    --mobile-margin: 2rem
+    --mobile-margin: 2rem;
     --max-width: 1440px;
 
     --primaryFont: Lato, Poppins, Helvetica, sans-serif;
@@ -100,6 +96,7 @@ a {
     height: 72px;
     width: 15%;
     min-width: 150px;
+    max-width: 250px;
   }
 
   .navLinks {
@@ -132,14 +129,19 @@ a {
 }
 
 /* HERO */
+.wrapper {
+  background-color: var(--background);
+}
 
 #hero {
-  min-height: 560px;
-  height: 60vh;
+  /*min-height: 560px;*/
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding: var(--main-margin);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: var(--background);
+
 }
 
 #hero .left {
@@ -154,6 +156,7 @@ a {
 
 #hero .right {
   grid-column: span 8;
+  height: 60vh;
   transform: translateY(6rem);
 }
 
@@ -248,7 +251,7 @@ main {
   transition: 300ms;
 }
 
-.card-copy {
+.card-content {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
 }
@@ -261,22 +264,21 @@ main {
 .secondary-button {
   background-color: white;
   color: var(--primaryColor);
-  padding: 0.5rem 3rem;
+  /*padding: 0.5rem 3rem;
   border-radius: 0.5rem;
   font-size: 1.125rem;
   border-style: solid 1px;
-  border-color:var(--primaryColor);
+  border-color: #fb3f5c !important;*/
   cursor: pointer;
   transition: var(--motion-2);
 }
 
 .secondary-button:hover {
-  color: white;
-  background-color: var(--primaryColor);
+  color: #a81e33;
 }
 
 .secondary-button:active {
-  background-color: var(--primaryColor-light);
+  color: var(--primaryColor-light);
   transition: var(--motion-1);
 }
 
@@ -453,6 +455,66 @@ i {
 
 /* media queries */
 
+@media screen and (max-width: 900px) {
+
+  #hero .left {
+    grid-column: span 12;
+    height: 20vh;}
+
+  #hero .right {
+    grid-column: span 12;
+    height: 40vh;
+  }
+
+  #hero-img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;}
+
+  #about-me {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+  .card {
+    grid-column: span 12;}
+
+  #about-me-section .skills {
+    padding-top: 1rem;
+  }
+  
+  .tools {
+    padding-top: 1rem;
+  }
+  
+  #left-about-me {
+    grid-column: span 12;
+  }
+  
+  #right-about-me {
+    grid-column: span 12;
+    gap: 4rem;}
+
+  #about-me-section .skills {
+    padding-top: 1rem;
+  }
+  
+  .tools {
+    padding-top: 1rem;
+  }
+  
+  #left-about-me {
+    grid-column: span 12;
+  }
+  
+  #right-about-me {
+    grid-column: span 12;
+    gap: 4rem;}
+}
+
+/* media queries */
+
 @media screen and (max-width: 760px) {
 
 #WaiBrand {
@@ -471,6 +533,12 @@ nav #burger {
 .linkedIn {
   display: none;} 
 
+
+#Hello {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+  }
+
 #hero {
   height: 80vh;
   padding: 24px;
@@ -482,50 +550,22 @@ nav #burger {
   grid-column: span 12;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: canter;
   align-items: start;
   gap: 1.7rem;}
 
-  #Hello {
-    font-size: 3.5rem;
-    letter-spacing: -2px;
-  }
 
 #hero .right {
-  grid-column: span 12;
-  transform: translateY(-12rem);}
+  grid-column: span 12;}
   
-#hero-img {
-  width: 100%;
-  height: 250%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;}
   
 .section-header {
   padding: 24px;}
 
-.card {
-  grid-column: span 12;}
 
 #about-me-section {
   padding: 36px 24px;
 }  
-#about-me-section .skills {
-  padding-top: 1rem;
-}
-
-.tools {
-  padding-top: 1rem;
-}
-
-#left-about-me {
-  grid-column: span 12;
-}
-
-#right-about-me {
-  grid-column: span 12;
-  gap: 4rem;}
 
 .contact-list {
   grid-column: span 12;}
