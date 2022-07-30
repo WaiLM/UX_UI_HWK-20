@@ -26,12 +26,20 @@
     font-size: 2.5rem;
   }
 
+  h2 a {
+    font-family: var(--primaryFont);
+    font-weight: lighter;
+    color: var(--textColor);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
   h3 {
     font-family: var(--primaryFont);
     font-weight: normal;
     color: var(--textColor);
     font-size: 1.8rem;
-    padding: 16px 0 16px 0;
+    padding: 8px 0 8px 0;
   }
 
 a {
@@ -85,27 +93,26 @@ a {
     height: auto;
     }
 
-  nav {
-    position: sticky;
-    top: 0;
-    height: 72px;
-    padding: 3rem 4rem;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background-color: var(--background);
-    z-index: 100;
-  }
-
-#WaiBrand {
-    position:absolute;
-    left: var(--main-margin);
-    top: 1rem;
-    height: 72px;
-    width: 15%;
-    min-width: 150px;
-    max-width: 200px;
-  }
+    nav {
+      position: sticky;
+      top: 0;
+      height: 72px;
+      padding: 3rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--background);
+      z-index: 100;
+    }
+    
+    #WaiBrand {
+      height: 72px;
+      width: 15%;
+      min-width: 150px;
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+    }
 
   .navLinks {
     display: flex;
@@ -275,11 +282,6 @@ main {
 .secondary-button {
   background-color: white;
   color: var(--primaryColor);
-  /*padding: 0.5rem 3rem;
-  border-radius: 0.5rem;
-  font-size: 1.125rem;
-  border-style: solid 1px;
-  border-color: #fb3f5c !important;*/
   cursor: pointer;
   transition: var(--motion-2);
 }
@@ -372,7 +374,6 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   background-color: var(--textColor);
   min-height: 200px;
-  gap: 1.5rem;
 }
 
 footer .reverse {
@@ -384,7 +385,6 @@ footer #contact {
   grid-column: span 6;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .contact-list {
@@ -457,13 +457,19 @@ footer #contact {
 
 @media screen and (max-width: 900px) {
 
+  #hero {
+    height: auto;}
+
   #hero .left {
     grid-column: span 12;
-    height: 20vh;}
+    padding-top: 24px;
+    padding-bottom: 24px;}
 
   #hero .right {
     grid-column: span 12;
-    height: 40vh;
+    height: auto;
+    transform: translateY(0);
+    min-height: 40vh;
   }
 
   #hero-img {
@@ -481,32 +487,26 @@ footer #contact {
     grid-column: span 12;}
 
   #about-me-section .skills {
-    padding-top: 1rem;
-  }
+    padding-top: 1rem;}
   
   .tools {
-    padding-top: 1rem;
-  }
+    padding-top: 1rem;}
   
   #left-about-me {
-    grid-column: span 12;
-  }
+    grid-column: span 12;}
   
   #right-about-me {
     grid-column: span 12;
     gap: 4rem;}
 
   #about-me-section .skills {
-    padding-top: 1rem;
-  }
+    padding-top: 1rem;}
   
   .tools {
-    padding-top: 1rem;
-  }
+    padding-top: 1rem;}
   
   #left-about-me {
-    grid-column: span 12;
-  }
+    grid-column: span 12;}
   
   #right-about-me {
     grid-column: span 12;
@@ -516,9 +516,6 @@ footer #contact {
 /* media queries */
 
 @media screen and (max-width: 760px) {
-
-#WaiBrand {
-  left: 24px;}
 
 nav {
   padding: 1rem 24px;
@@ -533,14 +530,13 @@ nav #burger {
 .linkedIn {
   display: none;} 
 
-
 #Hello {
     font-size: 4.5rem;
     letter-spacing: -2.5px;
   }
 
 #hero {
-  height: 80vh;
+  height: fit-content;
   padding: 24px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -548,25 +544,17 @@ nav #burger {
   
 #hero .left {
   grid-column: span 12;
-  display: flex;
-  flex-direction: column;
-  padding-top: 12.5rem;
-  justify-content: center;
-  align-items: start;
-  gap: 1.7rem;}
-
+  gap: 1rem;}
 
 #hero .right {
-  grid-column: span 12;}
-  
+  grid-column: span 12;
+  height: auto;}
   
 .section-header {
   padding: 24px;}
 
-
 #about-me-section {
-  padding: 36px 24px;
-}  
+  padding: 36px 24px;}  
 
 .contact-list {
   grid-column: span 12;}
@@ -575,8 +563,7 @@ footer {
   padding: 36px 24px;}
 
 main {
-  padding: 24px;
-  }
+  padding: 24px;}
 }
 
 /* scriptcity */
