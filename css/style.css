@@ -6,7 +6,7 @@
 
   p {
     font-family: var(--secondaryFont);
-    font-weight: normal;
+    font-weight: 200;
     line-height: 1.4rem;
     color: var(--textColor);
     font-size: 16px;
@@ -148,11 +148,18 @@ a {
   background-color: var(--background);
 }
 
+#Hello {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 8rem 4rem 0 4rem;
+}
+
 #hero {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--main-margin);
+  padding: 2rem 4rem 4rem 4rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -162,15 +169,15 @@ a {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   gap: 2rem;
 }
 
 #hero .right {
   grid-column: span 8;
-  height: 60vh;
-  transform: translateY(6rem);
+  height: 50vh;
+  transform: translateY(-2rem);
 }
 
 #Hello {
@@ -186,9 +193,9 @@ a {
 }
 
 #introCopy {
-  font-family: var(--secondaryFont);
-  font-weight: normal;
-  line-height: 1.75rem;
+  font-family: var(--primaryFont);
+  font-weight: 200;
+  line-height: 2rem;
   color: var(--textColor);
   font-size: 18px;
 }
@@ -217,10 +224,9 @@ button:active {
 #hero-img {
   background-image: url('../images/ABC_Hero_mockup.png');
   width: 140%;
-  height: 100%;
+  height: 130%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
   }
 
 /* Portfolio Section */
@@ -455,6 +461,17 @@ footer #contact {
 
 /* media queries */
 
+@media screen and (max-width: 1100px) {
+
+  #introCopy {
+    font-family: var(--primaryFont);
+    font-weight: 200;
+    line-height: 2rem;
+    color: var(--textColor);
+    font-size: 18px;
+  }}
+
+
 @media screen and (max-width: 900px) {
 
   #hero {
@@ -515,6 +532,7 @@ footer #contact {
 
 /* media queries */
 
+
 @media screen and (max-width: 760px) {
 
 nav {
@@ -533,6 +551,7 @@ nav #burger {
 #Hello {
     font-size: 4.5rem;
     letter-spacing: -2.5px;
+    padding: 40px 24px 0 24px;
   }
 
 #hero {
