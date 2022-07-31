@@ -245,6 +245,7 @@ button:active {
   border-left-style: solid;
   border-width: 0.3rem;
   border-color: var(--primaryColor);
+  transform: translateX(-1.3rem);
 }
 
 main {
