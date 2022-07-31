@@ -82,7 +82,7 @@ h4 {
   --clr-light: #1f1f1f;
   --wires-background: #F3F1ED;
   --wires-primary: #305029;
-  --wires-lightgreen: #CED7C9;
+  --wires-lightgreen: #e7e9e7;
 
 
   --ln: 1px solid #C4C4C4;
@@ -114,7 +114,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background);
+  background-color: white;
   z-index: 100;
 }
 
@@ -163,24 +163,24 @@ cursor: pointer;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 8rem 4rem 0rem 4rem;
-}
-
-#process {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 8rem 4rem 8rem 4rem;
+  padding: 6rem 4rem 0rem 4rem;
 }
 
 .bottom-rule {
   height: 0.3rem;
   width: 6rem;
-  background-color: var(--primaryColor);
+  background-color: var(--wires-primary);
 }
 
 .wrapper {
-  background-color: var(--background);
+  background-color: var(--wires-lightgreen);
+}
+
+.wrapper-nocolor {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--main-margin);
 }
 
 #project {
@@ -188,13 +188,13 @@ cursor: pointer;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--main-margin-sml);
+  padding: 0 0 0 4rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-#project .left {
-  grid-column: span 5;
+.copy-left {
+  grid-column: span 3;
   max-width: 600px;
   height: fit-content;
   display: flex;
@@ -202,15 +202,15 @@ cursor: pointer;
   justify-content: center;
   gap: 1 rem;
   align-items: stretch;
-  padding: 2rem 5rem 4rem 0;
+  padding: 4rem 0 4rem 0;
 }
 
 #title {
   font-family: var(--primaryFont);
-  font-weight: normal;
+  font-weight: 200;
   color: var(--textColor);
-  font-size: 2.5rem;
-  line-height: 2.4rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
 }
 
 #title-sub {
@@ -219,7 +219,7 @@ cursor: pointer;
   color: var(--textColor);
   font-size: 1.8rem;
   line-height: 3rem;
-  padding: 8 0 0 0;
+  padding: 6 0 0 0;
 }
 
 hr {
@@ -258,13 +258,12 @@ button:active {
 }
 
 #hero-img {
-  background-image: url('../images/ABC_Hero_mockup.png');
-  width: 100%;
-  height: 100%;
+  background-image: url('../images/wires-hero-mockup.png');
+  width: 120%;
+  height: 120%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: aqua;
-  background-position-y: 100%;
+  background-position-y: 0;
   }
 
 /* Portfolio Section */
@@ -280,19 +279,20 @@ main {
 }
 
 .section-header {
-  grid-column: span 12;
+  grid-column: span 6;
+  padding-top: 3rem;
 }
 
 .section-label {
   padding-left: 1rem;
   border-left-style: solid;
   border-width: 0.3rem;
-  border-color: var(--primaryColor);
+  border-color: var(--wires-primary);
   transform: translateX(-1.3rem);
 }
 
-.bodycopy {
-  grid-column: span 12;
+.section-header .bodycopy {
+  grid-column: span 6;
   padding: 2rem 0;
 }
 
@@ -300,14 +300,14 @@ main {
   grid-column: span 12;
 }
 
-#img-a {
-  background-image: url('../images/ABC_Hero_mockup.png');
+.img-centered #img-a {
+  background-image: url('../images/wires_casestudy_2.png');
   grid-column: span 12;
-  width: 100%;
-  height: 560px;
+  width: 103%;
+  height: 150px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 49%;
 }
 
 
@@ -414,7 +414,7 @@ footer #contact {
 @media screen and (max-width: 900px) {
 
 
-  #project .left {
+  #project .copy-left {
     grid-column: span 12;}
 
   #project .right {
@@ -447,8 +447,7 @@ nav #burger {
   display: none;} 
 
 #project {
-  padding: 24px;
-  background-color: var(--background);}
+  padding: 24px;}
   
 .section-header {
   padding: 24px;} 
